@@ -1,0 +1,13 @@
+{
+    "tasks": [
+        {
+            "label": "Start Development backend",
+            "script": "dev",
+            "type": "npm",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+    ]
+}

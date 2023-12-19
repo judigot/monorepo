@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "App",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd backend; pnpm run dev; cd ../frontend; pnpm run dev",
+    "build": "cd backend; pnpm run build; cd ../frontend; pnpm run build",
+    "start": "cd backend; pnpm run start; cd ../frontend; pnpm run start",
+    "test": "cd backend; pnpm run test; cd ../frontend; pnpm run test",
+    "lint": "cd backend; pnpm run lint; cd ../frontend; pnpm run lint",
+    "install": "cd backend; pnpm install ci; cd ../frontend; pnpm run lint",
+    "download-updates-backend": "cd backend; pnpm run lint; cd ../backend; pnpm run lint",
+    "download-updates-frontend": "cd backend; pnpm run test; cd ../frontend; pnpm run test",
+    "download-all-updates": "cd backend; pnpm run test; cd ../frontend; pnpm run test",
+    "clone-backend": "BACKEND_REPO=$(grep BACKEND_REPO .env | cut -d '=' -f2); cd backend; git clone $BACKEND_REPO backend",
+    "clone-frontend": "FRONTEND_REPO=$(grep FRONTEND_REPO .env | cut -d '=' -f2); cd frontend; git clone $FRONTEND_REPO frontend",
+    "clone-all": "pnpm run clone-backend; pnpm run clone-frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
