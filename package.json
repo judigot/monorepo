@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cd backend; pnpm run dev & cd ../frontend; pnpm run dev",
     "build": "cd backend; pnpm run build & cd ../frontend; pnpm run build",
-    "start": "cd backend; pnpm run start & cd ../frontend; pnpm run start",
+    "start": "cd backend; pnpm start & cd ../frontend; pnpm start",
     "test": "cd backend; pnpm run test; cd ../frontend; pnpm run test",
     "lint": "cd backend; pnpm run lint & cd ../frontend; pnpm run lint",
     "install:all": "cd backend; pnpm install & cd ../frontend; pnpm install",
