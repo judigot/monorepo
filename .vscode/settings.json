@@ -1,6 +1,4 @@
 {
-  "npm.exclude": [
-    "**/frontend/**",
-    "**/backend/**"
-  ],
+  "npm.exclude": ["**/frontend/**", "**/backend/**"],
+  "git.ignoredRepositories": ["backend", "frontend"]
 }
