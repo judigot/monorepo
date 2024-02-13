@@ -10,9 +10,9 @@
     "test": "cd backend; pnpm run test; cd ../frontend; pnpm run test",
     "lint": "cd backend; pnpm run lint & cd ../frontend; pnpm run lint",
     "install:all": "cd backend; pnpm install & cd ../frontend; pnpm install",
-    "download-updates:backend": "cd backend; pnpm run lint; cd ../backend; pnpm run lint",
-    "download-updates:frontend": "cd backend; git pull & cd ../frontend; git pull",
-    "download-updates:all": "cd backend; pnpm run test & cd ../frontend; pnpm run test",
+    "download-updates:backend": "cd backend; git pull",
+    "download-updates:frontend": "cd frontend; git pull",
+    "download-updates:all": "pnpm run download-updates:backend & pnpm run download-updates:frontend",
     "clone:backend": "BACKEND_REPO=$(grep BACKEND_REPO .env | cut -d '=' -f2); git clone $BACKEND_REPO backend",
     "clone:frontend": "FRONTEND_REPO=$(grep FRONTEND_REPO .env | cut -d '=' -f2); git clone $FRONTEND_REPO frontend",
     "clone:all": "pnpm run clone:backend & pnpm run clone:frontend"
