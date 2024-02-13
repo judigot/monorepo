@@ -15,7 +15,7 @@
     "download-updates:all": "cd backend; pnpm run test & cd ../frontend; pnpm run test",
     "clone:backend": "BACKEND_REPO=$(grep BACKEND_REPO .env | cut -d '=' -f2); git clone $BACKEND_REPO backend",
     "clone:frontend": "FRONTEND_REPO=$(grep FRONTEND_REPO .env | cut -d '=' -f2); git clone $FRONTEND_REPO frontend",
-    "clone:all": "pnpm run clone-backend & pnpm run clone-frontend"
+    "clone:all": "pnpm run clone:backend & pnpm run clone:frontend"
   },
   "keywords": [],
   "author": "",
