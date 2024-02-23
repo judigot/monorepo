@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  # backend:
+  #   image: node:lts-alpine
+  #   container_name: backend
+  #   working_dir: /app
+  #   volumes:
+  #     - ./backend:/app
+  #   environment:
+  #     - NODE_ENV=production
+  #   entrypoint: ["/bin/sh", "-c"]
+  #   command:
+  #     - |
+  #       npm install -g pnpm
+  #       pnpm install
+  #       pnpm build
+  #       pnpm start
+  #   ports:
+  #     - "3000:3000"
+
+  frontend:
+    image: node:lts-alpine
+    container_name: frontend
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    environment:
+      - NODE_ENV=production
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        npm install -g pnpm && 
+        pnpm install --force && 
+        pnpm build && 
+        pnpm start
+    ports:
+      - "5000:5000"
